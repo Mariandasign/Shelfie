@@ -3,6 +3,8 @@ const inputFormato = document.getElementById("inputFormato")
 const inputCategoria = document.getElementById("inputCategoria")
 const inputCalificacion = document.getElementById("inputCalificacion")
 
+let lecturas = [];
+
 const agregarLectura = () => {
     //console.log("agregarLectura")
     const lectura = {
@@ -12,5 +14,8 @@ const agregarLectura = () => {
         calificacion: inputCalificacion.value,
     };
 
-    console.log(lectura);
+    lecturas.push(lectura);
+    console.log(lecturas);
+
+    //localStorage.setItem("lecturas", lecturas);
 };
