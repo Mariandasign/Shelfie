@@ -29,14 +29,14 @@
                         <div class="mb-3 mt-4">
                           <label for="inputTitulo" class="form-label">
                             Título de la lectura</label>
-                          <input type="text" class="form-control" id="inputTitulo" >
+                          <input type="text" class="form-control" id="inputTitulo" autocomplete="off">
                         </div>
                         <div class="row g-4">
                             <div class="mb-3 col-auto">
-                                <label for="inputLectura" class="form-label">
-                                    Tipo de lectura</label>
-                                <select class="form-select" aria-label="Default select example" id="inputLectura">
-                                    <option selected>Selecciona el tipo lectura</option>
+                                <label for="inputClasificacion" class="form-label">
+                                    Clasificación</label>
+                                <select class="form-select" aria-label="Default select example" id="inputClasificacion">
+                                    <option selected>Selecciona la clasificación</option>
                                     <option value="Libro">Libro</option>
                                     <option value="Manga">Manga</option>
                                     <option value="Manhwa">Manhwa</option>
@@ -74,6 +74,7 @@
                             </div>
                         </div> 
                         <button type="button" class="btn btn-dark" onclick="agregarLectura()">Agregar lectura</button>
+                        <button type="button" class="btn btn-dark" onclick="mostrarLecturas()">Mostrar lecturas</button>
                       </form>
                 </div>
             </div>
@@ -81,41 +82,14 @@
     </main>
     <section class="container libreria">
         <div class="row mt-5">
-            <div class="col">
-                <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Titulo de la lectura</th>
-                        <th scope="col">Tipo de lectura</th>
-                        <th scope="col">Categoría</th>
-                        <th scope="col">Calificación</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
-                    </tbody>
-                  </table>
+            <h2> Lecturas</h2>
+            <div class="col-sm-6 mb-4 mb-sm-1 mt-2" id="tarjetasLecturas">
+              
             </div>
-
-        </div>
-
+                </div>
+              </div>
+            </div>
+          </div>
     </section>
     <footer>
         <nav class="navbar" style="background-color: #FFE5D0;">
