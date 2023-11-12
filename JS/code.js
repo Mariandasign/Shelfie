@@ -5,7 +5,9 @@ const inputCalificacion = document.getElementById("inputCalificacion")
 const tarjetasLecturas = document.getElementById("tarjetasLecturas")
 
 //let lecturas = JSON.parse(localStorage.getItem("lecturas")) || []; //aquí marca error
-let lecturas = JSON.parse(localStorage.getItem("lecturas")) || [];
+let lecturas = JSON.parse(localStorage.getItem("lecturas")) || [];  //Mensaje: Uncaught SyntaxError: "undefined" is not valid JSON
+                                                                    //  at JSON.parse (<anonymous>)
+                                                                    // at code.js:8:21
 
 const agregarLectura = () => {
     const lectura = {
@@ -30,7 +32,7 @@ const eliminarLectura = (id) => {
 
     const index = lecturas.indexOf(lectura);
 
-    lecturas.splice(index, 1);
+    lecturas.splice(index,1);
 };
 
 const mostrarLecturas = () => {
