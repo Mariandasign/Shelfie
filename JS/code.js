@@ -33,17 +33,17 @@ const eliminarLectura = (id) => {
     const index = lecturas.indexOf(lectura);
 
     lecturas.splice(index,1);
+    mostrarLecturas();
 };
 
 const mostrarLecturas = () => {
     //console.log("si muestra");
     tarjetasLecturas.innerHTML = "";
     lecturas.forEach((lectura) => {
-        tarjetasLecturas.innerHTML += ` 
-                                            <div class="card col-sm-8 mb-4 mb-sm-1 mt-2">
+        tarjetasLecturas.innerHTML += ` <div id="${lectura.id}">
+                                            <div class="card">
                                                 <div class="card-body">
                                                     <h5 class="card-title">${lectura.titulo}</h5>
-                                                    <p class="text-body-tertiary">${lectura.id}</p>
                                                     <h6 class="card-subtitle mt-1">Formato:</h6><p class="card-text">${lectura.formato}</p>
                                                     <h6 class="card-subtitle">Categoria:</h6><p class="card-text">${lectura.categoria}</p>
                                                     <h6 class="card-subtitle">Calificación:</h6><p class="card-text">${lectura.calificacion}</p>
@@ -57,5 +57,5 @@ const mostrarLecturas = () => {
 };
                                         //No sé si agregúe de forma correcta los botones, o si deban de ir en un div
                                         //Según la estructura de boostrap es así .-.
-                                        //<div id="${lectura.id}">
+                                        //<p class="text-body-tertiary">${lectura.id}</p>
 window.addEventListener("load", mostrarLecturas);

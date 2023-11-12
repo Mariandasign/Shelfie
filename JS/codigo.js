@@ -15,7 +15,9 @@ const agregarLectura = () => {
     };
 
     lecturas.push(lectura);
-    console.log(lecturas);
+    //console.log(lecturas);
 
-    //localStorage.setItem("lecturas", lecturas);
+    localStorage.setItem("lecturas", JSON.stringify(lecturas));
 };
+
+agregarLectura()
