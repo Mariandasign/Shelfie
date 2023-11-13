@@ -41,7 +41,7 @@ const mostrarLecturas = () => {
     tarjetasLecturas.innerHTML = "";
     lecturas.forEach((lectura) => {
         tarjetasLecturas.innerHTML += ` <div id="${lectura.id}">
-                                            <div class="card">
+                                            <div class="card mb-4 mb-sm-1 mt-2">
                                                 <div class="card-body">
                                                     <h5 class="card-title">${lectura.titulo}</h5>
                                                     <h6 class="card-subtitle mt-1">Formato:</h6><p class="card-text">${lectura.formato}</p>

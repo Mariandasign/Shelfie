@@ -26,16 +26,24 @@
         <div class="container">
             <div class="row">
                 <div class="col">
+                    <figure class="text-center">
+                        <blockquote class="blockquote m-5">
+                          <p>"En algún lugar de la biblioteca, hay una página que ha sido escrita para nosotros”</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            Alberto Manguel
+                        </figcaption>
+                    </figure>
                     <form>
                         <div class="mb-3 mt-4">
-                          <label for="inputTitulo" class="form-label">
-                            Título de la lectura</label>
+                          <label for="inputTitulo" class="form-label"><strong>
+                            Título de la lectura</strong></label>
                           <input type="text" class="form-control" id="inputTitulo" autocomplete="off">
                         </div>
                         <div class="row g-4">
                             <div class="mb-3 col-auto">
                                 <label for="inputFormato" class="form-label">
-                                    Formato</label>
+                                    <strong>Formato</strong></label>
                                 <select class="form-select" aria-label="Default select example" id="inputFormato">
                                     <option selected>Selecciona el formato</option>
                                     <option value="Libro">Libro</option>
@@ -49,7 +57,7 @@
                             </div>
                             <div class="mb-3 col-auto">
                                 <label for="inputCategoria" class="form-label">
-                                    Categoría</label>
+                                    <strong>Categoría</strong></label>
                                 <select class="form-select" aria-label="Default select example" id="inputCategoria">
                                     <option selected>Selecciona la categoría</option>
                                     <option value="Drama">Drama</option>
@@ -63,7 +71,7 @@
                             </div>
                             <div class="mb-4 col-auto">
                                 <label for="inputCalificacion" class="form-label">
-                                    Calificación</label>
+                                    <strong>Calificación</strong></label>
                                 <select class="form-select" aria-label="Default select example" id="inputCalificacion">
                                     <option selected>Califica la lectura</option>
                                     <option value="Abandonado">Abandonado</option>
@@ -82,9 +90,9 @@
         </div>
     </main>
     <section class="container libreria">
-        <div class="row mt-5">
-            <h2> Lecturas</h2>
-            <div class="col-sm-6 mb-4 mb-sm-1 mt-2" id="tarjetasLecturas">
+        <div class="row  mt-5 mb-5">
+            <h2> Libreria</h2>
+            <div class="row row-cols-3" id="tarjetasLecturas">
                 
             </div>
                 </div>
@@ -92,15 +100,14 @@
             </div>
           </div>
     </section>
-    <footer>
-        <nav class="footer" style="background-color: #FFE5D0;">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <img src="./Assets/Shelfie (1).webp" alt="Logo" width="120" class="d-inline-block align-text-center ">
-              </a>
-            </div>
-          </nav>
+    <footer class="navbar" style="background-color: #FFE5D0;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./Assets/Shelfie (1).webp" alt="Logo" width="120" class="d-inline-block align-text-center">
+            </a>
+        </div>
     </footer>
+    </div>
     <script src="./JS/code.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
