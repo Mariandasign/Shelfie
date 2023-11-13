@@ -1,3 +1,7 @@
 .fondo {
     background-color: #FFF9F0;
 }
+
+#btnActualizar {
+    display: none;
+}
