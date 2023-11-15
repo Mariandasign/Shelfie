@@ -30,7 +30,13 @@ const eliminarLectura = (id) => {
     const index = lecturas.indexOf(lectura);
     //console.log(index);
     lecturas.splice(index,1);
+    localStorage.setItem(lectura, JSON.stringify(lecturas))
     mostrarLecturas();
+};
+
+const acualizarLectura = (id) =>{
+    console.log("se actualizó");
+
 };
 
 const editarLectura = (id) => {
@@ -56,7 +62,7 @@ const editarLectura = (id) => {
     } else {
         //alert ("El nombre es un campo requerido")
         inputTitulo.value = lecturas[index].titulo
-        inputFormato.value = lecturas[index].formato
+        inputFormato.value = lecturas[index].formato 
         inputCategoria.value = lecturas[index].categoria
         inputCalificacion.value = lecturas[index].calificacion
     };
@@ -65,7 +71,9 @@ const editarLectura = (id) => {
     document.getElementById("btnActualizar").style.display = "block";
     document.querySelector("#btnActualizar").onclick = acualizarLectura();
     
-    //console.log(index); 
+
+
+    //console.log("se actualizó"); 
     //lecturas.splice(index,1);
     //mostrarLecturas();
 };
@@ -75,7 +83,7 @@ const mostrarLecturas = () => {
     tarjetasLecturas.innerHTML = "";
     lecturas.forEach((lectura) => {
         tarjetasLecturas.innerHTML += ` <div id="${lectura.id}">
-                                            <div class="card bg-light-subtle shadow-sm border-0 mb-4 mb-sm-1 mt-2">
+                                            <div class="card bg-light-subtle shadow-sm mb-4 mb-sm-1 mt-2">
                                                 <div class="card-body">
                                                     <h5 class="card-title">${lectura.titulo}</h5>
                                                     <h6 class="card-subtitle mt-1">Formato:</h6><p class="card-text">${lectura.formato}</p>
