@@ -30,14 +30,14 @@ const eliminarLectura = (id) => {
     const index = lecturas.indexOf(lectura);
     //console.log(index);
     lecturas.splice(index,1);
-    localStorage.setItem(lectura, JSON.stringify(lecturas))
+    localStorage.setItem("lecturas", JSON.stringify(lecturas))
     mostrarLecturas();
 };
 
-const acualizarLectura = (id) =>{
-    console.log("se actualizó");
+//const acualizarLectura = () =>{
+   // console.log("se actualizó");
 
-};
+//};
 
 const editarLectura = (id) => {
     
@@ -69,14 +69,15 @@ const editarLectura = (id) => {
 
     document.getElementById("btnAgregar").style.display = "none";
     document.getElementById("btnActualizar").style.display = "block";
-    document.querySelector("#btnActualizar").onclick = acualizarLectura();
     
 
 
     //console.log("se actualizó"); 
     //lecturas.splice(index,1);
-    //mostrarLecturas();
+    mostrarLecturas();
 };
+
+//document.getElementById("#btnActualizar").onclick = acualizarLectura();
 
 const mostrarLecturas = () => {
     //console.log("si muestra");
